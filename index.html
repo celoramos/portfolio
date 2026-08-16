@@ -1,63 +1,720 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-BR">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portifolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#24292e" />
+
+    <title>Marcelo Ramos - Engenheiro de Software</title>
+    <meta
+      name="description"
+      content="Desenvolvedor Back-end especializado em Node.JS, TypeScript, Python, Java e arquitetura de APIs escaláveis."
+    />
+    <link rel="canonical" href="https://celoramos.github.io/portfolio/" />
+
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Marcelo Ramos · Desenvolvedor Back-end & Engenheiro de Software"
+    />
+    <meta
+      property="og:description"
+      content="Sistemas robustos, arquitetura back-end, automações e APIs de alta performance."
+    />
+
     <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
-    <header class="cabecalho">
-      <nav class="cabecalho__menu">
-        <a class="cabecalho__menu__link" href="index.html">Home</a>
-        <a class="cabecalho__menu__link" href="about.html">Sobre mim</a>
-      </nav>
+    <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="nav" id="top-nav">
+      <div class="wrap nav__inner">
+        <nav class="nav__links" aria-label="Seções do site">
+          <a class="nav__link" href="#sobre" data-i18n="nav_sobre">Sobre</a>
+          <a class="nav__link" href="#projetos" data-i18n="nav_projetos"
+            >Projetos</a
+          >
+          <a class="nav__link" href="#skills" data-i18n="nav_skills">Stack</a>
+          <a class="nav__link" href="#experiencia" data-i18n="nav_experiencia"
+            >Experiência</a
+          >
+          <a class="nav__link" href="#contato" data-i18n="nav_contato"
+            >Contato</a
+          >
+        </nav>
+
+        <div class="nav__actions">
+          <button
+            class="lang-btn"
+            type="button"
+            data-lang-toggle
+            title="Alternar idioma / Switch language"
+            aria-label="Alternar idioma entre Português e Inglês"
+          >
+            <span class="mono" data-lang-label>PT-BR</span>
+          </button>
+
+          <button
+            class="nav__toggle"
+            type="button"
+            data-nav-toggle
+            aria-expanded="false"
+            aria-controls="menu-mobile"
+          >
+            Menu
+          </button>
+        </div>
+      </div>
+
+      <div class="nav__panel" id="menu-mobile" data-nav-panel hidden>
+        <a href="#sobre" data-i18n="nav_sobre">Sobre</a>
+        <a href="#projetos" data-i18n="nav_projetos">Projetos</a>
+        <a href="#skills" data-i18n="nav_skills">Stack</a>
+        <a href="#experiencia" data-i18n="nav_experiencia">Experiência</a>
+        <a href="#contato" data-i18n="nav_contato">Contato</a>
+      </div>
     </header>
-    <main class="apresentacao">
-      <section class="apresentacao__conteudo">
-        <h1 class="apresentacao__conteudo__titulo">
-          Transforme sua aplicação com
-          <strong class="titulo-destaque">um Back-end de qualidade</strong>
-        </h1>
-        <p class="apresentacao__conteudo__texto">
-          Olá! Sou Marcelo Ramos, desenvolvedor Back-end com especialidade em
-          Javascript, Node.JS, Typescript, Python e Java avançado. Desenvolvo sistemas robustos
-          que transformam ideias em soluções escaláveis. Pronto para levar sua
-          aplicação ao próximo nível?
-        </p>
-        <div class="apresentacao__links">
-          <h2 class="apresentacao__links__subtitulo">Acesse minhas redes</h2>
-          <a
-            class="apresentacao__links__link"
-            href="https://github.com/celoramos"
-          >
-            <img src="./assets/github.png" />
-            Github
-          </a>
-          <a
-            class="apresentacao__links__link"
-            href="https://www.linkedin.com/in/marcelo-ramos-895944217/"
-          >
-            <img src="./assets/linkedin.png" />
-            Linkedin
-          </a>
-          <a
-            class="apresentacao__links__link"
-            href="https://wa.me/5573991151192"
-            target="_blank"
-          >
-            <img src="./assets/whatsapp.png" alt="Logo do WhatsApp" />WhatsApp
-          </a>
+
+    <main id="conteudo">
+      <section class="hero" id="inicio">
+        <div class="wrap">
+          <div class="hero__grid">
+            <div class="hero__content">
+              <p class="mono-caps kicker" data-i18n="hero_kicker">
+                Engenheiro de Software & Desenvolvedor Back-end
+              </p>
+              <div class="masthead">
+                <h1 class="h1 masthead__line">MARCELO RAMOS</h1>
+              </div>
+              <p class="hero__role" data-i18n="hero_role">
+                Engenheiro de Software & Desenvolvedor Back-end Java ·
+                SpringBoot, Node.js & APIs
+              </p>
+              <p class="lead hero__desc" data-i18n="hero_desc">
+                Desenvolvedor Back-end especializado no ecossistema Java e
+                SpringBoot. Migrei do Direito para a Engenharia de Software
+                focando em APIs RESTful escaláveis, microsserviços, segurança
+                com OAuth2/2FA, mensageria e automação com IA.
+              </p>
+
+              <div class="hero__cta">
+                <a
+                  class="btn btn--primary"
+                  href="#projetos"
+                  data-i18n="hero_btn_projects"
+                  >Ver projetos</a
+                >
+                <a
+                  class="btn btn--ghost"
+                  href="#contato"
+                  data-i18n="hero_btn_contact"
+                  >Falar comigo</a
+                >
+              </div>
+            </div>
+
+            <figure class="hero__figure panel">
+              <figcaption class="panel__bar">
+                <span class="panel__title">render_3d.bmp</span>
+                <span class="mono">1-BIT BAYER 8x8</span>
+              </figcaption>
+              <div class="hero__canvas-wrap">
+                <canvas
+                  data-dither
+                  role="img"
+                  aria-label="Esfera renderizada com dithering Bayer 8x8 que reage ao movimento do cursor"
+                ></canvas>
+              </div>
+              <div class="hero__cap mono-caps">
+                <span data-i18n="hero_cap_interactive">Interativo</span>
+                <span data-i18n="hero_cap_move">Mova o cursor</span>
+              </div>
+            </figure>
+          </div>
+
+          <div class="case__nums">
+            <div class="case__num">
+              <b>Java Back-end</b>
+              <span data-i18n="placar_1_lbl"
+                >Java, SpringBoot, SpringData JPA & Microsserviços</span
+              >
+            </div>
+            <div class="case__num">
+              <b>Arquitetura</b>
+              <span data-i18n="placar_2_lbl"
+                >Arquitetura de software limpa, Clean Code e Desenvolvimento
+                Ágil</span
+              >
+            </div>
+            <div class="case__num">
+              <b>DevOps & IA</b>
+              <span data-i18n="placar_3_lbl"
+                >Docker, Kubernetes, AWS, Kafka & LangChain4j</span
+              >
+            </div>
+          </div>
+
+          <dl class="ficha">
+            <div>
+              <dt data-i18n="ficha_base_lbl">Cidade</dt>
+              <dd data-i18n="ficha_base_val">Salvador - BA</dd>
+            </div>
+            <div>
+              <dt data-i18n="ficha_disp_lbl">Disponível</dt>
+              <dd data-i18n="ficha_disp_val">CLT / Estágio</dd>
+            </div>
+            <div>
+              <dt data-i18n="ficha_foco_lbl">Foco Atual</dt>
+              <dd data-i18n="ficha_foco_val">
+                Java, SpringBoot & Microsserviços
+              </dd>
+            </div>
+            <div>
+              <dt data-i18n="ficha_codigo_lbl">Fazendo códigos desde</dt>
+              <dd>2022</dd>
+            </div>
+          </dl>
         </div>
       </section>
-      <img src="./assets/Imagem.png" alt="Foto Marcelo programando" />
+
+      <div class="ramp" aria-hidden="true">
+        <span class="dither-50"></span><span class="dither-25"></span
+        ><span class="dither-12"></span>
+      </div>
+
+      <section class="sec invert" id="sobre">
+        <div class="wrap">
+          <div class="sec__head">
+            <span class="kicker">sobre.txt</span>
+            <h2 class="h2" data-i18n="sobre_title">Como eu trabalho</h2>
+          </div>
+
+          <div class="about__grid">
+            <div>
+              <p class="body-text" data-i18n="sobre_p1">
+                Minha jornada profissional começou no Direito, mas foi ao
+                descobrir a programação que encontrei minha verdadeira vocação.
+                Migrei para a Engenharia de Software motivado pela certeza de
+                construir soluções concretas, escaláveis e de alto impacto.
+              </p>
+              <p class="body-text" data-i18n="sobre_p2">
+                Como desenvolvedor back-end, dedico meu tempo à construção de
+                sistemas robustos em Java, Javascript, Node.JS, Typescript.
+                Valorizo o trabalho metódico, a organização rigorosa do código e
+                a atenção extrema aos detalhes — virtudes herdadas da formação
+                jurídica e essenciais para a engenharia de software de
+                qualidade.
+              </p>
+              <p class="body-text" data-i18n="sobre_p3">
+                Tenho especial interesse no desenvolvimento de APIs RESTful,
+                microsserviços, modelagem de banco de dados e integração de
+                inteligência artificial em processos de automação.
+              </p>
+            </div>
+
+            <div class="panel">
+              <div class="panel__bar">
+                <span class="panel__title">ficha.txt</span>
+              </div>
+              <dl class="panel__body">
+                <div class="spec-row">
+                  <dt data-i18n="ficha_role_lbl">Função</dt>
+                  <dd data-i18n="ficha_role_val">Desenvolvedor Back-end</dd>
+                </div>
+                <div class="spec-row">
+                  <dt data-i18n="ficha_edu_lbl">Formação</dt>
+                  <dd data-i18n="ficha_edu_val">Engenharia de Software</dd>
+                </div>
+                <div class="spec-row">
+                  <dt data-i18n="ficha_spec_lbl">Especialidades</dt>
+                  <dd>Java, JavaScript, TypeScript, Claude AI</dd>
+                </div>
+                <div class="spec-row">
+                  <dt data-i18n="ficha_db_lbl">Bancos de Dados</dt>
+                  <dd>PostgreSQL, MySQL, Oracle</dd>
+                </div>
+                <div class="spec-row">
+                  <dt data-i18n="ficha_lang_lbl">Idiomas</dt>
+                  <dd data-i18n="ficha_lang_val">
+                    Português (Nativo) e Inglês (Fluente)
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec" id="projetos">
+        <div class="wrap">
+          <div class="sec__head">
+            <span class="kicker" data-i18n="projetos_kicker"
+              >projetos/ · destaques</span
+            >
+            <h2 class="h2" data-i18n="projetos_title">O que eu construí</h2>
+            <p class="lead" data-i18n="projetos_lead">
+              Soluções de back-end, APIs e automações focadas em estabilidade e
+              desempenho.
+            </p>
+          </div>
+
+          <div class="grid-projects">
+            <article class="card">
+              <div class="card__thumb dither-12">
+                <div class="card__icon-overlay" aria-hidden="true">
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#2dba4e"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect
+                      x="2"
+                      y="2"
+                      width="20"
+                      height="8"
+                      rx="2"
+                      ry="2"
+                    ></rect>
+                    <rect
+                      x="2"
+                      y="14"
+                      width="20"
+                      height="8"
+                      rx="2"
+                      ry="2"
+                    ></rect>
+                    <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                    <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                  </svg>
+                </div>
+                <span class="card__idx">01</span>
+              </div>
+              <div class="card__body">
+                <h3 class="h3" data-i18n="p1_title">
+                  API Gateway & Microsserviços
+                </h3>
+                <p class="mono" data-i18n="p1_desc">
+                  Arquitetura de microsserviços orientada a eventos para alta
+                  demanda. Validação rigorosa de dados e alta performance.
+                </p>
+                <div class="card__tags">
+                  <span class="tag">Java</span>
+                  <span class="tag">SpringBoot</span>
+                  <span class="tag">RabbitMQ</span>
+                  <span class="tag">AWS CDK</span>
+                  <span class="tag">Docker</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__thumb dither-12">
+                <div class="card__icon-overlay" aria-hidden="true">
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#2dba4e"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                    <rect x="9" y="9" width="6" height="6"></rect>
+                    <line x1="9" y1="1" x2="9" y2="4"></line>
+                    <line x1="15" y1="1" x2="15" y2="4"></line>
+                    <line x1="9" y1="20" x2="9" y2="23"></line>
+                    <line x1="15" y1="20" x2="15" y2="23"></line>
+                    <line x1="20" y1="9" x2="23" y2="9"></line>
+                    <line x1="20" y1="15" x2="23" y2="15"></line>
+                    <line x1="1" y1="9" x2="4" y2="9"></line>
+                    <line x1="1" y1="15" x2="4" y2="15"></line>
+                  </svg>
+                </div>
+                <span class="card__idx">02</span>
+              </div>
+              <div class="card__body">
+                <h3 class="h3" data-i18n="p2_title">
+                  Automação & Agente Back-end com IA
+                </h3>
+                <p class="mono" data-i18n="p2_desc">
+                  Pipeline de processamento assíncrono para classificação e
+                  resposta inteligente de requisições utilizando modelos de
+                  linguagem.
+                </p>
+                <div class="card__tags">
+                  <span class="tag">Java</span>
+                  <span class="tag">SpringBoot</span>
+                  <span class="tag">OpenAI API</span>
+                  <span class="tag">Swagger</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__thumb dither-12">
+                <div class="card__icon-overlay" aria-hidden="true">
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#2dba4e"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                    ></path>
+                    <circle cx="12" cy="11" r="3"></circle>
+                  </svg>
+                </div>
+                <span class="card__idx">03</span>
+              </div>
+              <div class="card__body">
+                <h3 class="h3" data-i18n="p3_title">
+                  Sistema Corporativo & Autenticação Segura
+                </h3>
+                <p class="mono" data-i18n="p3_desc">
+                  Engine corporativa completa com controle de permissões, logs
+                  de auditoria e persistência otimizada no banco de dados.
+                </p>
+                <div class="card__tags">
+                  <span class="tag">Java</span>
+                  <span class="tag">SpringSecurity</span>
+                  <span class="tag">OAuth2 / 2FA</span>
+                  <span class="tag">PostgreSQL</span>
+                </div>
+              </div>
+            </article>
+
+            <a
+              class="card"
+              href="https://github.com/celoramos"
+              target="_blank"
+              rel="noopener"
+            >
+              <div class="card__thumb dither-12">
+                <div class="card__icon-overlay" aria-hidden="true">
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#2dba4e"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    ></path>
+                  </svg>
+                </div>
+                <span class="card__idx">++</span>
+              </div>
+              <div class="card__body">
+                <h3 class="h3" data-i18n="github_card_title">
+                  Repositórios no GitHub
+                </h3>
+                <p class="mono" data-i18n="github_card_desc">
+                  Confira meus outros projetos, scripts de automação, estudos e
+                  contribuições de código-fonte aberto.
+                </p>
+                <div class="card__tags">
+                  <span class="tag">github.com/celoramos ↗</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec sec--tight" id="skills">
+        <div class="wrap">
+          <div class="sec__head">
+            <span class="kicker">stack.cfg</span>
+            <h2 class="h2" data-i18n="stack_title">Ferramentas de Trabalho</h2>
+          </div>
+
+          <div class="grid-skills">
+            <article class="skill">
+              <div class="skill__bar">
+                <span class="skill__swatch dither-50" aria-hidden="true"></span>
+                <h3 class="h3" data-i18n="stack_c1">Java & Spring Ecosystem</h3>
+              </div>
+              <p>
+                Java · SpringBoot · SpringSecurity · SpringData JPA · Hibernate
+              </p>
+            </article>
+
+            <article class="skill">
+              <div class="skill__bar">
+                <span class="skill__swatch dither-50" aria-hidden="true"></span>
+                <h3 class="h3" data-i18n="stack_c2">Back-end & Arquitetura</h3>
+              </div>
+              <p>Node.js · TypeScript · Python · REST APIs · POO & SOLID</p>
+            </article>
+
+            <article class="skill">
+              <div class="skill__bar">
+                <span class="skill__swatch dither-50" aria-hidden="true"></span>
+                <h3 class="h3" data-i18n="stack_c3">
+                  Bancos de Dados & DevOps
+                </h3>
+              </div>
+              <p>PostgreSQL · MySQL · Docker · RabbitMQ · AWS CDK · CI/CD</p>
+            </article>
+
+            <article class="skill">
+              <div class="skill__bar">
+                <span class="skill__swatch dither-50" aria-hidden="true"></span>
+                <h3 class="h3" data-i18n="stack_c4">IA & Automação</h3>
+              </div>
+              <p>
+                Claude / Claude Cowork · OpenAI APIs · LangChain ·
+                Swagger/OpenAPI · IA em Back-end
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <div class="ramp" aria-hidden="true">
+        <span class="dither-50"></span><span class="dither-25"></span
+        ><span class="dither-12"></span>
+      </div>
+
+      <section class="sec invert" id="experiencia">
+        <div class="wrap">
+          <div class="sec__head">
+            <span class="kicker">experiencia.log</span>
+            <h2 class="h2" data-i18n="timeline_title">Linha do Tempo</h2>
+          </div>
+
+          <div class="tl-grid">
+            <div class="tl">
+              <div class="tl__item">
+                <p class="tl__year" data-i18n="tl_1_year">2026</p>
+                <h3 class="h3 tl__role" data-i18n="tl_1_role">
+                  Especialização Back-end Java & SpringBoot
+                </h3>
+                <p class="body-text" data-i18n="tl_1_desc">
+                  Desenvolvimento de APIs REST escaláveis, microsserviços com
+                  SpringBoot, SpringSecurity (OAuth2, 2FA), mensageria com
+                  RabbitMQ, IaC com AWS CDK, Docker e pipelines CI/CD com GitHub
+                  Actions.
+                </p>
+              </div>
+
+              <div class="tl__item">
+                <p class="tl__year" data-i18n="tl_2_year">Graduação</p>
+                <h3 class="h3 tl__role" data-i18n="tl_2_role">
+                  Engenharia de Software
+                </h3>
+                <p class="body-text" data-i18n="tl_2_desc">
+                  Estudo aprofundado de estrutura de dados, algoritmos,
+                  modelagem de sistemas, qualidade de software, bancos de dados
+                  relacionais e padrões de projeto (Clean Code & SOLID).
+                </p>
+              </div>
+
+              <div class="tl__item">
+                <p class="tl__year" data-i18n="tl_3_year">Transição</p>
+                <h3 class="h3 tl__role" data-i18n="tl_3_role">
+                  Direito → Engenharia de Software
+                </h3>
+                <p class="body-text" data-i18n="tl_3_desc">
+                  Transição de carreira motivada pelo fascínio por tecnologia e
+                  resolução lógica de problemas. Aplicação da precisão e do
+                  rigor analítico do Direito na escrita de código limpo e
+                  arquitetura de software.
+                </p>
+              </div>
+            </div>
+
+            <figure class="tl__aside panel">
+              <figcaption class="panel__bar">
+                <span class="panel__title">cube_3d.bmp</span>
+                <span class="mono">1-BIT BAYER 8x8</span>
+              </figcaption>
+              <div class="hero__canvas-wrap">
+                <canvas
+                  data-dither-cube
+                  role="img"
+                  aria-label="Cubo 3D renderizado com dithering Bayer 8x8 que reage ao movimento do cursor"
+                ></canvas>
+              </div>
+              <div class="hero__cap mono-caps">
+                <span data-i18n="hero_cap_interactive">Interativo</span>
+                <span data-i18n="hero_cap_move">Mova o cursor</span>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec" id="contato">
+        <div class="wrap">
+          <div class="sec__head">
+            <span class="kicker">contato.form</span>
+            <h2 class="h2" data-i18n="contact_title">Bora conversar</h2>
+            <p class="lead" data-i18n="contact_lead">
+              Envie uma mensagem ou entre em contato direto pelas redes sociais.
+            </p>
+          </div>
+
+          <div class="contact__grid">
+            <div class="panel">
+              <div class="panel__bar">
+                <span class="panel__title">contato_info.txt</span>
+              </div>
+              <div class="panel__body">
+                <div class="contact-row">
+                  <span class="contact-row__key">E-mail</span>
+                  <a
+                    class="contact-row__val"
+                    data-email
+                    href="mailto:celoramosdev@gmail.com"
+                    >celoramosdev@gmail.com</a
+                  >
+                </div>
+                <div class="contact-row">
+                  <span class="contact-row__key">GitHub</span>
+                  <a
+                    class="contact-row__val"
+                    href="https://github.com/celoramos"
+                    target="_blank"
+                    rel="noopener"
+                    >github.com/celoramos</a
+                  >
+                </div>
+                <div class="contact-row">
+                  <span class="contact-row__key">LinkedIn</span>
+                  <a
+                    class="contact-row__val"
+                    href="https://www.linkedin.com/in/marcelo-ramos-895944217/"
+                    target="_blank"
+                    rel="noopener"
+                    >linkedin.com/in/marcelo-ramos</a
+                  >
+                </div>
+                <div class="contact-row">
+                  <span class="contact-row__key">WhatsApp</span>
+                  <a
+                    class="contact-row__val"
+                    href="https://wa.me/5573991151192"
+                    target="_blank"
+                    rel="noopener"
+                    >(73) 99115-1192</a
+                  >
+                </div>
+                <div class="contact-row">
+                  <span class="contact-row__key" data-i18n="ficha_base_lbl"
+                    >Cidade</span
+                  >
+                  <span class="contact-row__val" data-i18n="ficha_base_val"
+                    >Salvador - BA</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <form class="panel" data-form novalidate>
+              <div class="panel__bar">
+                <span class="panel__title">nova_mensagem.sh</span>
+              </div>
+              <div class="panel__body">
+                <div class="field">
+                  <label for="f-nome" data-i18n="lbl_nome">Seu Nome</label>
+                  <input
+                    id="f-nome"
+                    name="nome"
+                    type="text"
+                    placeholder="Marcelo..."
+                    required
+                  />
+                </div>
+                <div class="field">
+                  <label for="f-email" data-i18n="lbl_email">Seu E-mail</label>
+                  <input
+                    id="f-email"
+                    name="email"
+                    type="email"
+                    placeholder="nome@empresa.com"
+                    required
+                  />
+                </div>
+                <div class="field">
+                  <label for="f-msg" data-i18n="lbl_msg">Mensagem</label>
+                  <textarea
+                    id="f-msg"
+                    name="mensagem"
+                    placeholder="Olá Marcelo, gostaria de conversar sobre um projeto..."
+                    required
+                  ></textarea>
+                </div>
+                <button
+                  class="btn btn--primary"
+                  type="submit"
+                  data-i18n="btn_submit"
+                >
+                  Enviar mensagem
+                </button>
+                <p class="form__status" data-status role="status"></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer class="rodape">
-      <p>
-        <strong>© 2026 Marcelo Ramos. Todos os direitos reservados.</strong>
-      </p>
+
+    <footer class="foot">
+      <div class="wrap foot__inner">
+        <span class="mono-caps" data-i18n="footer_by"
+          >Desenvolvido por Marcelo Ramos</span
+        >
+        <ul class="social">
+          <li>
+            <a
+              class="social__l"
+              href="https://github.com/celoramos"
+              target="_blank"
+              rel="noopener"
+              >GitHub</a
+            >
+          </li>
+          <li>
+            <a
+              class="social__l"
+              href="https://www.linkedin.com/in/marcelo-ramos-895944217/"
+              target="_blank"
+              rel="noopener"
+              >LinkedIn</a
+            >
+          </li>
+          <li>
+            <a
+              class="social__l"
+              href="https://wa.me/5573991151192"
+              target="_blank"
+              rel="noopener"
+              >WhatsApp</a
+            >
+          </li>
+        </ul>
+        <span class="mono-caps" data-i18n="footer_text"
+          >Editado no dia 15/08/2026</span
+        >
+      </div>
     </footer>
+    <script src="js/app.js" defer></script>
   </body>
 </html>
