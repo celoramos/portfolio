@@ -299,21 +299,30 @@
 
     function onScroll() {
       var scrollPos = window.scrollY || window.pageYOffset;
-      var docHeight =
-        document.documentElement.scrollHeight - window.innerHeight;
+      var windowHeight = window.innerHeight;
+      var docHeight = document.documentElement.scrollHeight - windowHeight;
+
       if (progressBar && docHeight > 0) {
         var pct = Math.min(100, Math.max(0, (scrollPos / docHeight) * 100));
         progressBar.style.width = pct + "%";
       }
 
       var currentSectionId = "";
-      sections.forEach(function (sec) {
-        var top = sec.offsetTop - 120;
-        var height = sec.offsetHeight;
-        if (scrollPos >= top && scrollPos < top + height) {
-          currentSectionId = sec.getAttribute("id");
+
+      // Se rolou até o final da página (ou próximo do final), ativa a última seção ("contato")
+      if (scrollPos + windowHeight >= document.documentElement.scrollHeight - 60) {
+        if (sections.length > 0) {
+          currentSectionId = sections[sections.length - 1].getAttribute("id");
         }
-      });
+      } else {
+        sections.forEach(function (sec) {
+          var top = sec.offsetTop - 140;
+          var height = sec.offsetHeight;
+          if (scrollPos >= top && scrollPos < top + height) {
+            currentSectionId = sec.getAttribute("id");
+          }
+        });
+      }
 
       navLinks.forEach(function (link) {
         var href = link.getAttribute("href");
@@ -328,6 +337,7 @@
     }
 
     window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll, { passive: true });
     onScroll();
   }
 

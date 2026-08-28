@@ -226,11 +226,13 @@ p.lead {
 }
 
 .nav__link:hover,
-.nav__link.active {
+.nav__link.active,
+.nav__link[aria-current="true"] {
   color: var(--accent);
 }
 
-.nav__link.active::after {
+.nav__link.active::after,
+.nav__link[aria-current="true"]::after {
   content: "";
   position: absolute;
   bottom: -4px;
